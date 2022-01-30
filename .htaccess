@@ -1,0 +1,47 @@
+# The following will allow you to use URLs such as the following:
+#
+#   newsletter.theayliffeboutique.com/next/next
+#   newsletter.theayliffeboutique.com/theayliffeboutiquenews
+#   newsletter.theayliffeboutique.com/about
+#   newsletter.theayliffeboutique.com/contact
+#   newsletter.theayliffeboutique.com/newsletterabout
+#   newsletter.theayliffeboutique.com/cookiepolicyu
+#   newsletter.theayliffeboutique.com/search
+#   newsletter.theayliffeboutique.com/index
+#   newsletter.theayliffeboutique.com/testarticle
+#
+# Which will actually serve files such as the following:
+#
+#   newsletter.theayliffeboutique.com/next/next.html
+#   newsletter.theayliffeboutique.com/theayliffeboutiquenews.html
+#   newsletter.theayliffeboutique.com/about.html
+#   newsletter.theayliffeboutique.com/contact.html
+#   newsletter.theayliffeboutique.com/newsletterabout.html
+#   newsletter.theayliffeboutique.com/cookiepolicyuk.html
+#   newsletter.theayliffeboutique.com/search.html
+#   newsletter.theayliffeboutique.com/index.html
+#   newsletter.theayliffeboutique.com/testarticle.html
+#
+# But *only if they exist*, otherwise it will report the usual 404 error.
+
+Options +FollowSymLinks
+RewriteEngine On
+
+# Remove trailing slashes.
+# e.g. example.com/foo/ will redirect to example.com/foo
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.+)/$ /$1 [R=permanent,QSA]
+
+# Redirect to HTML if it exists.
+# e.g. example.com/foo will display the contents of example.com/foo.html
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}.html -f
+RewriteRule ^(.+)$ $1.html [L,QSA]
+
+# Redirect to PHP if it exists.
+# e.g. example.com/foo will display the contents of example.com/foo.php
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}.php -f
+RewriteRule ^(.+)$ $1.php [L,QSA]
