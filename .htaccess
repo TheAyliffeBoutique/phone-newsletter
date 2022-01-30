@@ -9,6 +9,7 @@
 #   newsletter.theayliffeboutique.com/search
 #   newsletter.theayliffeboutique.com/index
 #   newsletter.theayliffeboutique.com/testarticle
+#   newsletter.theayliffeboutique.com/testarticle1
 #
 # Which will actually serve files such as the following:
 #
@@ -21,6 +22,7 @@
 #   newsletter.theayliffeboutique.com/search.html
 #   newsletter.theayliffeboutique.com/index.html
 #   newsletter.theayliffeboutique.com/testarticle.html
+#   newsletter.theayliffeboutique.com/testarticle1.html
 #
 # But *only if they exist*, otherwise it will report the usual 404 error.
 
