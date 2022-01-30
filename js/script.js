@@ -11,7 +11,7 @@ inputBox.onkeyup = (e)=>{
     let emptyArray = [];
     if(userData){
         icon.onclick = ()=>{
-            webLink = `https://newsletter.theayliffeboutique.com/${userData}`;
+            webLink = `https://newsletter-phone.theayliffeboutique.com/${userData}`;
             linkTag.setAttribute("href", webLink);
             linkTag.click();
         }
@@ -38,7 +38,7 @@ function select(element){
     let selectData = element.textContent;
     inputBox.value = selectData;
     icon.onclick = ()=>{
-        webLink = `https://newsletter.theayliffeboutique.com/${selectData}`;
+        webLink = `https://newsletter-phone.theayliffeboutique.com/${selectData}`;
         linkTag.setAttribute("href", webLink);
         linkTag.click();
     }
