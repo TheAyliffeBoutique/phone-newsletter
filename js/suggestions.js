@@ -1,0 +1,18 @@
+let suggestions = [
+    "about",
+    "newsletterabout",
+    "Ayliffe",
+    "Boutique",
+    "News",
+    "Cookie",
+    "Policy",
+    "cookiepolicyuk",
+    "the",
+    "theayliffeboutiquenews",
+    "uk",
+    "newsletter",
+    "home",
+    "test",
+    "article",
+    "testarticle",
+];
